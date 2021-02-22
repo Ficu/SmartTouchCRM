@@ -24,5 +24,20 @@ namespace SmartTouchCRM.Pages
         {
             InitializeComponent();
         }
+
+        private void Products_Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/Pages/ProductsPage.xaml", UriKind.Relative));
+        }
+
+        private void Orders_Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/Pages/OrdersPage.xaml", UriKind.Relative));
+        }
+
+        private void Customers_Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/Pages/CustomersPage.xaml", UriKind.Relative));
+        }
     }
 }

@@ -24,5 +24,10 @@ namespace SmartTouchCRM.Pages
         {
             InitializeComponent();
         }
+
+        private void Back_Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/Pages/WelcomePage.xaml", UriKind.Relative));
+        }
     }
 }

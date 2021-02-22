@@ -12,9 +12,9 @@
         <Image Height="113" Margin="0,28,0,0" VerticalAlignment="Top" Source="/Assets/logo-white.png" HorizontalAlignment="Center" Stretch="Uniform" StretchDirection="Both"/>
         <Label Content="Welcome in CRM system, choose options below" Margin="0,177,0,0" VerticalAlignment="Top" Foreground="White" FontStretch="Normal" FontStyle="Normal" FontWeight="Normal" HorizontalAlignment="Center" FontSize="14" Padding="0,0,0,0"/>
         <WrapPanel Margin="0,226,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal">
-            <Button x:Name="Products_Button" Content="_Produkty" RenderTransformOrigin="2.232,0.744" Height="31" Width="143" BorderThickness="0,0,0,0" Margin="10,10,10,10"/>
-            <Button x:Name="Orders_Button" Content="_Zamówienia" RenderTransformOrigin="2.232,0.744" Height="31" Width="143" BorderThickness="0,0,0,0" Margin="10,10,10,10"/>
-            <Button x:Name="Clients_Button" Content="_Klienci" RenderTransformOrigin="2.232,0.744" Height="31" Width="143" BorderThickness="0,0,0,0" Margin="10,10,10,10"/>
+            <Button x:Name="Products_Button" Content="_Produkty" Click="Products_Button_Click" Height="31" Width="143" BorderThickness="0,0,0,0" Margin="10,10,10,10"/>
+            <Button x:Name="Orders_Button" Content="_Zamówienia" Click="Orders_Button_Click" Height="31" Width="143" BorderThickness="0,0,0,0" Margin="10,10,10,10"/>
+            <Button x:Name="Customers_Button" Content="_Klienci" Click="Customers_Button_Click" Height="31" Width="143" BorderThickness="0,0,0,0" Margin="10,10,10,10"/>
         </WrapPanel>
 
     </Grid>
