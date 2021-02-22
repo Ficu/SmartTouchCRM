@@ -10,5 +10,7 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("smarttouchdatabse.mdf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("smarttouchdatabse_log.ldf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("smarttouchmodel.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("smarttouchmodel.tt")]
 
 

@@ -24,3 +24,8 @@ C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\SmartTouchCRM.c
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\bin\Debug\SmartTouchDatabse.mdf
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\bin\Debug\SmartTouchDatabse_log.ldf
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\SmartTouchCRM_Content.g.cs
+C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\bin\Debug\EntityFramework.dll
+C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\bin\Debug\EntityFramework.xml
+C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\SmartTouchCRM.csproj.CopyComplete
