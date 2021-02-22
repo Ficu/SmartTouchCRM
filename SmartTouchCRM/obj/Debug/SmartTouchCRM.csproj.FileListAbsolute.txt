@@ -21,3 +21,6 @@ C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\SmartTouchCRM.c
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\SmartTouchCRM.exe
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\SmartTouchCRM.pdb
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\SmartTouchCRM.csprojAssemblyReference.cache
+C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\bin\Debug\SmartTouchDatabse.mdf
+C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\bin\Debug\SmartTouchDatabse_log.ldf
+C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\SmartTouchCRM_Content.g.cs
