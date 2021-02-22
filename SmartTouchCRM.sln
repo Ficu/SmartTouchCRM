@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartTouchCRM", "SmartTouchCRM\SmartTouchCRM.csproj", "{197CCDE8-7AA5-440E-B07F-1A49DDC4CFFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{197CCDE8-7AA5-440E-B07F-1A49DDC4CFFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{197CCDE8-7AA5-440E-B07F-1A49DDC4CFFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{197CCDE8-7AA5-440E-B07F-1A49DDC4CFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{197CCDE8-7AA5-440E-B07F-1A49DDC4CFFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7EF03851-B631-41E5-8398-E62D91789B95}
+	EndGlobalSection
+EndGlobal
