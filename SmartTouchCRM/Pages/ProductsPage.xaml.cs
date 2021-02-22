@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartTouchCRM.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,14 +21,34 @@ namespace SmartTouchCRM.Pages
     /// </summary>
     public partial class ProductsPage : Page
     {
+
+        ProductService ProductService = new ProductService();
+
         public ProductsPage()
         {
             InitializeComponent();
+            Product_Data.ItemsSource = ProductService.GetList();
+
+            this.Loaded += delegate
+            {
+
+                Window window = Window.GetWindow(this);
+                window.SetBinding(Window.MinHeightProperty, new Binding() { Source = this.MinHeight });
+                window.SetBinding(Window.MinWidthProperty, new Binding() { Source = this.MinWidth });
+
+            };
         }
 
         private void Back_Button_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/Pages/WelcomePage.xaml", UriKind.Relative));
+        }
+
+        private void AddProduct_Click(object sender, RoutedEventArgs e)
+        {
+            ProductsWindow_Add test = new ProductsWindow_Add();
+            test.ShowDialog();
+
         }
     }
 }

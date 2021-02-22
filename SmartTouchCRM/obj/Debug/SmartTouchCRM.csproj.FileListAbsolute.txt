@@ -29,3 +29,7 @@ C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\bin\Debug\EntityFramework
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\bin\Debug\EntityFramework.xml
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\SmartTouchCRM.csproj.CopyComplete
+C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\CustomersPage_Add.g.cs
+C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\ProductsWindow_Add.g.cs
+C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\CustomersPage_Add.baml
+C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\ProductsWindow_Add.baml
