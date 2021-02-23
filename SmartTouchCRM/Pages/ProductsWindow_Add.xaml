@@ -11,12 +11,12 @@
         <StackPanel Margin="10">
             <Label Content="Dodaj produkt" HorizontalAlignment="Center" FontSize="16" Foreground="White"/>
             <Label Content="_Nazwa produktu:" Target="{Binding ElementName=txtName}" Foreground="White" />
-            <TextBox Name="txtName" />
+            <TextBox Name="productName" />
             <Label Content="_Cena:" Target="{Binding ElementName=price}" Foreground="White" />
-            <TextBox Name="price" />
+            <TextBox Name="productPrice" />
             <Label Content="_Opis:" Target="{Binding ElementName=desc}" Foreground="White" />
-            <TextBox Name="desc" Height="60" />
-            <Button x:Name="AddButton" Content="Dodaj" Margin="10,30,10,0" Height="42" VerticalAlignment="Center" Width="342"/>
+            <TextBox Name="productDescription" Height="60" />
+            <Button x:Name="AddButton" Content="Dodaj" Click="AddButton_Click" Margin="10,30,10,0" Height="42" VerticalAlignment="Center" Width="342"/>
         </StackPanel>
     </Grid>
 </Window>

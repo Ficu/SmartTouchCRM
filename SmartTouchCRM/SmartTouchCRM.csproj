@@ -94,11 +94,14 @@
     <Compile Include="Orders_Products.cs">
       <DependentUpon>SmartTouchModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Pages\CustomersPage_Add.xaml.cs">
-      <DependentUpon>CustomersPage_Add.xaml</DependentUpon>
+    <Compile Include="Pages\CustomersWindow_Add.xaml.cs">
+      <DependentUpon>CustomersWindow_Add.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ProductsWindow_Add.xaml.cs">
       <DependentUpon>ProductsWindow_Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProductsWindow_Edit.xaml.cs">
+      <DependentUpon>ProductsWindow_Edit.xaml</DependentUpon>
     </Compile>
     <Compile Include="Products.cs">
       <DependentUpon>SmartTouchModel.tt</DependentUpon>
@@ -134,7 +137,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\CustomersPage_Add.xaml">
+    <Page Include="Pages\CustomersWindow_Add.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -147,6 +150,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\ProductsWindow_Add.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ProductsWindow_Edit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

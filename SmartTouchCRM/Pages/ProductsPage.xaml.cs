@@ -46,9 +46,38 @@ namespace SmartTouchCRM.Pages
 
         private void AddProduct_Click(object sender, RoutedEventArgs e)
         {
-            ProductsWindow_Add test = new ProductsWindow_Add();
-            test.ShowDialog();
+            ProductsWindow_Add addWindow = new ProductsWindow_Add();
+            addWindow.ShowDialog();
+            Reload();
+        }
 
+        private void Reload()
+        {
+            Product_Data.ItemsSource = ProductService.GetList();
+        }
+
+        private void EditProduct_Click(object sender, RoutedEventArgs e)
+        {
+            Products selectedProduct = (Product_Data.SelectedItem as Products);
+            if (selectedProduct == null)
+            {
+                MessageBox.Show("Musisz najpierw wybrać produkt!");
+            } else
+            {            
+
+                ProductsWindow_Edit editWindow = new ProductsWindow_Edit(selectedProduct);
+                editWindow.ShowDialog();
+                Reload();
+                
+            }
+            
+        }
+
+        private void DeleteProduct_Click(object sender, RoutedEventArgs e)
+        {
+            int selectedProductId = (Product_Data.SelectedItem as Products).product_id;
+            ProductService.Remove(selectedProductId);
+            Reload();
         }
     }
 }

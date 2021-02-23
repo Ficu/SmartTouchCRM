@@ -1,0 +1,22 @@
+﻿<Window x:Class="SmartTouchCRM.Pages.ProductsWindow_Edit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartTouchCRM.Pages"
+        mc:Ignorable="d"
+        Title="Dodaj produkt" Height="450" Width="389.605" Icon="icon.png" ResizeMode="NoResize">
+    <Grid Background="#FF00529B">
+
+        <StackPanel Margin="10">
+            <Label Content="Edytuj produkt" HorizontalAlignment="Center" FontSize="16" Foreground="White"/>
+            <Label Content="_Nazwa produktu:" Target="{Binding ElementName=txtName}" Foreground="White" />
+            <TextBox Name="productName" />
+            <Label Content="_Cena:" Target="{Binding ElementName=price}" Foreground="White" />
+            <TextBox Name="productPrice" />
+            <Label Content="_Opis:" Target="{Binding ElementName=desc}" Foreground="White" />
+            <TextBox Name="productDescription" Height="60" />
+            <Button x:Name="EditButton" Content="Edytuj" Click="EditButton_Click" Margin="10,30,10,0" Height="42" VerticalAlignment="Center" Width="342"/>
+        </StackPanel>
+    </Grid>
+</Window>

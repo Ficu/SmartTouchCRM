@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartTouchCRM.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,14 @@ namespace SmartTouchCRM.Pages
         public ProductsWindow_Add()
         {
             InitializeComponent();
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            ProductService product = new ProductService();
+            Decimal.TryParse(productPrice.Text, out decimal productPriceDecimal);
+            product.Add(productName.Text, productDescription.Text, productPriceDecimal);
+            this.Hide();
         }
     }
 }
