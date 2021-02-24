@@ -21,8 +21,7 @@ namespace SmartTouchCRM.Pages
     /// </summary>
     public partial class ProductsPage : Page
     {
-
-        ProductService ProductService = new ProductService();
+        readonly ProductService ProductService = new ProductService();
 
         public ProductsPage()
         {

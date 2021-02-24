@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,8 @@ namespace SmartTouchCRM.Classes
                 price = productPrice
             };
 
+           
+
             _db.Products.Add(product);
 
             _db.SaveChanges();
@@ -33,15 +36,27 @@ namespace SmartTouchCRM.Classes
         public void Update(int productId, string productName, string productDescription, decimal productPrice)
         {
 
-           Products updateProduct = _db.Products.Where(x => x.product_id == productId).FirstOrDefault();
+           
+            try
+            {
+                var updateProduct = _db.Products.Where(x => x.product_id == productId).Single();
 
+                updateProduct.product_name = productName;
+                updateProduct.product_description = productDescription;
+                updateProduct.price = productPrice;
 
-            updateProduct.product_name = productName;
-            updateProduct.product_description = productDescription;
-            updateProduct.price = productPrice;
+                _db.Products.Attach(updateProduct);
+               
 
-            _db.Entry(updateProduct).State = System.Data.Entity.EntityState.Modified;
-            _db.SaveChanges();
+                _db.Entry(updateProduct).State = EntityState.Modified;
+                _db.SaveChanges();
+               
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.InnerException);
+            }
         }
 
         public void Remove(int productId)
@@ -53,12 +68,12 @@ namespace SmartTouchCRM.Classes
         }
 
         // NOT USED 
-        public List<Products> getById(int productId)
+        /*public List<Products> GetById(int productId)
         {
             this.GetList();
             var product = _db.Products.Where(x => x.product_id == productId).ToList();
 
             return product;
-        }
+        }*/
     }
 }

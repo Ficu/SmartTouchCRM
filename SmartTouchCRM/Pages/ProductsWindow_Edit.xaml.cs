@@ -20,17 +20,17 @@ namespace SmartTouchCRM.Pages
     /// </summary>
     public partial class ProductsWindow_Edit : Window
     {
-        private Products productSelected;
-        ProductService product = new ProductService();
+        private readonly Products productSelected;
+        readonly ProductService product = new ProductService();
 
         public ProductsWindow_Edit(Products productSelected)
         {
             InitializeComponent();
             this.productSelected = productSelected;
-            fillData();
+            FillData();
         }
 
-        private void fillData()
+        private void FillData()
         {
             productName.Text = productSelected.product_name;
             productPrice.Text = Convert.ToString(productSelected.price);
