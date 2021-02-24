@@ -10,11 +10,11 @@
 
         <StackPanel Margin="10">
             <Label Content="Edytuj produkt" HorizontalAlignment="Center" FontSize="16" Foreground="White"/>
-            <Label Content="_Nazwa produktu:" Target="{Binding ElementName=txtName}" Foreground="White" />
+            <Label Content="_Nazwa produktu:" Target="{Binding ElementName=productName}" Foreground="White" />
             <TextBox Name="productName" />
-            <Label Content="_Cena:" Target="{Binding ElementName=price}" Foreground="White" />
+            <Label Content="_Cena:" Target="{Binding ElementName=productPrice}" Foreground="White" />
             <TextBox Name="productPrice" />
-            <Label Content="_Opis:" Target="{Binding ElementName=desc}" Foreground="White" />
+            <Label Content="_Opis:" Target="{Binding ElementName=productDescription}" Foreground="White" />
             <TextBox Name="productDescription" Height="60" />
             <Button x:Name="EditButton" Content="Edytuj" Click="EditButton_Click" Margin="10,30,10,0" Height="42" VerticalAlignment="Center" Width="342"/>
         </StackPanel>

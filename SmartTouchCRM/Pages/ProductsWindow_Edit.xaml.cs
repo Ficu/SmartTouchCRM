@@ -40,7 +40,11 @@ namespace SmartTouchCRM.Pages
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
+            Decimal.TryParse(productPrice.Text, out decimal productPriceDecimal);
 
+            product.Update(productSelected.product_id, productName.Text, productDescription.Text, productPriceDecimal);
+
+            this.Hide();
         }
     }
 }

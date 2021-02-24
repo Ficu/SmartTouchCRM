@@ -9,7 +9,7 @@ namespace SmartTouchCRM.Classes
 
     public class ProductService
     {
-        private SmartTouchDatabseEntities _db = new SmartTouchDatabseEntities();
+        private readonly SmartTouchDatabseEntities _db = new SmartTouchDatabseEntities();
 
         public List<Products> GetList()
         {
@@ -28,6 +28,20 @@ namespace SmartTouchCRM.Classes
 
             _db.SaveChanges();
 
+        }
+
+        public void Update(int productId, string productName, string productDescription, decimal productPrice)
+        {
+
+           Products updateProduct = _db.Products.Where(x => x.product_id == productId).FirstOrDefault();
+
+
+            updateProduct.product_name = productName;
+            updateProduct.product_description = productDescription;
+            updateProduct.price = productPrice;
+
+            _db.Entry(updateProduct).State = System.Data.Entity.EntityState.Modified;
+            _db.SaveChanges();
         }
 
         public void Remove(int productId)

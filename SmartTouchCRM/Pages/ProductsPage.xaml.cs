@@ -79,5 +79,10 @@ namespace SmartTouchCRM.Pages
             ProductService.Remove(selectedProductId);
             Reload();
         }
+
+        private void Reload_Click(object sender, RoutedEventArgs e)
+        {
+            Reload();
+        }
     }
 }
