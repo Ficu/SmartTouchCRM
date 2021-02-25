@@ -81,5 +81,6 @@ namespace SmartTouchCRM.Pages
             CustomerService.Remove(selectedCustomerId);
             Reload();
         }
+
     }
 }
