@@ -52,7 +52,8 @@ namespace SmartTouchCRM.Pages
 
         private void Reload()
         {
-            Product_Data.ItemsSource = ProductService.GetList();
+            SmartTouchDatabseEntities _reload = new SmartTouchDatabseEntities(); // mało efektywne ale musi tak być, przez problemy z odświeżaniem
+            Product_Data.ItemsSource = _reload.Products.ToList();
         }
 
         private void EditProduct_Click(object sender, RoutedEventArgs e)
@@ -76,11 +77,6 @@ namespace SmartTouchCRM.Pages
         {
             int selectedProductId = (Product_Data.SelectedItem as Products).product_id;
             ProductService.Remove(selectedProductId);
-            Reload();
-        }
-
-        private void Reload_Click(object sender, RoutedEventArgs e)
-        {
             Reload();
         }
     }

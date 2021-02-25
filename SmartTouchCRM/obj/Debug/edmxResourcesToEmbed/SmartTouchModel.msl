@@ -7,7 +7,6 @@
           <ScalarProperty Name="customer_id" ColumnName="customer_id" />
           <ScalarProperty Name="firstname" ColumnName="firstname" />
           <ScalarProperty Name="lastname" ColumnName="lastname" />
-          <ScalarProperty Name="bithdate" ColumnName="bithdate" />
           <ScalarProperty Name="telephone" ColumnName="telephone" />
           <ScalarProperty Name="mail" ColumnName="mail" />
         </MappingFragment>

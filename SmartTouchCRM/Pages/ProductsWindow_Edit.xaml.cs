@@ -21,7 +21,6 @@ namespace SmartTouchCRM.Pages
     public partial class ProductsWindow_Edit : Window
     {
         private readonly Products productSelected;
-        readonly ProductService product = new ProductService();
 
         public ProductsWindow_Edit(Products productSelected)
         {
@@ -40,6 +39,8 @@ namespace SmartTouchCRM.Pages
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
+            ProductService product = new ProductService();
+
             Decimal.TryParse(productPrice.Text, out decimal productPriceDecimal);
 
             product.Update(productSelected.product_id, productName.Text, productDescription.Text, productPriceDecimal);

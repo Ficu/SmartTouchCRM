@@ -23,7 +23,6 @@ namespace SmartTouchCRM
         public int customer_id { get; set; }
         public string firstname { get; set; }
         public string lastname { get; set; }
-        public Nullable<System.DateTime> bithdate { get; set; }
         public string telephone { get; set; }
         public string mail { get; set; }
     

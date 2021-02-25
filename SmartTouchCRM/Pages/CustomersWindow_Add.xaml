@@ -7,16 +7,18 @@
         mc:Ignorable="d"
         Title="Dodaj klienta" Height="450" Width="389.605" Icon="icon.png" ResizeMode="NoResize">
     <Grid Background="#FF00529B">
-<!--
+
         <StackPanel Margin="10">
-            <Label Content="Dodaj produkt" HorizontalAlignment="Center" FontSize="16" Foreground="White"/>
-            <Label Content="_Nazwa produktu:" Target="{Binding ElementName=txtName}" Foreground="White" />
-            <TextBox Name="txtName" />
-            <Label Content="_Cena:" Target="{Binding ElementName=price}" Foreground="White" />
-            <TextBox Name="price" />
-            <Label Content="_Opis:" Target="{Binding ElementName=desc}" Foreground="White" />
-            <TextBox Name="desc" Height="60" />
-            <Button x:Name="AddButton" Content="Dodaj" Margin="10,30,10,0" Height="42" VerticalAlignment="Center" Width="342"/>
-        </StackPanel>-->
+            <Label Content="Dodaj klienta" HorizontalAlignment="Center" FontSize="16" Foreground="White"/>
+            <Label Content="_Imię:" Target="{Binding ElementName=firstName}" Foreground="White" />
+            <TextBox Name="firstName" />
+            <Label Content="_Nazwisko:" Target="{Binding ElementName=lastName}" Foreground="White" />
+            <TextBox Name="lastName" />
+            <Label Content="_Numer telefonu:" Target="{Binding ElementName=telephone}" Foreground="White" />
+            <TextBox Name="telephone" />
+            <Label Content="_Adres email:" Target="{Binding ElementName=mail}" Foreground="White" />
+            <TextBox Name="mail" />
+            <Button x:Name="AddButton" Content="Dodaj" Click="AddButton_Click" Margin="10,30,10,0" Height="42" VerticalAlignment="Center" Width="342"/>
+        </StackPanel>
     </Grid>
 </Window>

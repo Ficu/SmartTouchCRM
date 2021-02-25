@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartTouchCRM.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,14 @@ namespace SmartTouchCRM.Pages
         public CustomersWindow_Add()
         {
             InitializeComponent();
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            CustomersService customer = new CustomersService();
+
+            customer.Add(firstName.Text, lastName.Text, telephone.Text, mail.Text);
+            this.Hide();
         }
     }
 }

@@ -1,0 +1,24 @@
+﻿<Window x:Class="SmartTouchCRM.Pages.CustomersWindow_Edit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartTouchCRM.Pages"
+        mc:Ignorable="d"
+        Title="Edytuj klienta" Height="450" Width="389.605" Icon="icon.png" ResizeMode="NoResize">
+    <Grid Background="#FF00529B">
+
+        <StackPanel Margin="10">
+            <Label Content="Edytuj klienta" HorizontalAlignment="Center" FontSize="16" Foreground="White"/>
+            <Label Content="_Imię:" Target="{Binding ElementName=firstName}" Foreground="White" />
+            <TextBox Name="firstName" />
+            <Label Content="_Nazwisko:" Target="{Binding ElementName=lastName}" Foreground="White" />
+            <TextBox Name="lastName" />
+            <Label Content="_Numer telefonu:" Target="{Binding ElementName=telephone}" Foreground="White" />
+            <TextBox Name="telephone" />
+            <Label Content="_Adres email:" Target="{Binding ElementName=mail}" Foreground="White" />
+            <TextBox Name="mail" />
+            <Button x:Name="EditButton" Content="Edytuj" Click="EditButton_Click" Margin="10,30,10,0" Height="42" VerticalAlignment="Center" Width="342"/>
+        </StackPanel>
+    </Grid>
+</Window>

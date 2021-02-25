@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SmartTouchCRM.Pages"
         mc:Ignorable="d"
-        Title="Dodaj produkt" Height="450" Width="389.605" Icon="icon.png" ResizeMode="NoResize">
+        Title="Edytuj produkt" Height="450" Width="389.605" Icon="icon.png" ResizeMode="NoResize">
     <Grid Background="#FF00529B">
 
         <StackPanel Margin="10">

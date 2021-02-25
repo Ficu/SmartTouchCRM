@@ -10,6 +10,20 @@
 
     <Grid Background="#FF00529B">
         <Button x:Name="Back_Button" Content="_Wróć" Click="Back_Button_Click" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="80" Height="30"/>
-
+        <Label Content="Zarządzanie klientami" HorizontalAlignment="Left" Margin="159,36,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontStretch="ExtraCondensed" Width="661" HorizontalContentAlignment="Center" Height="30"/>
+        <StackPanel HorizontalAlignment="Left" Height="369" Margin="10,71,0,0" VerticalAlignment="Top" Width="133">
+            <Button x:Name="AddProduct" Click="AddProduct_Click" Content="Dodaj" Margin="0,10" Height="35"/>
+            <Button x:Name="EditProduct" Click="EditProduct_Click" Content="Edytuj" Margin="0,10" Height="35"/>
+            <Button x:Name="DeleteProduct" Click="DeleteProduct_Click" Content="Usuń" Margin="0,10" Height="35"/>
+        </StackPanel>
+        <DataGrid x:Name="Customers_Data" x:FieldModifier="public" AutoGenerateColumns="False" ColumnWidth="*" Margin="143,71,35,29" MinHeight="350" MinWidth="622" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding customer_id}"/>
+                <DataGridTextColumn Header="Imię" Binding="{Binding firstname}"/>
+                <DataGridTextColumn Header="Nazwisko" Binding="{Binding lastname}"/>
+                <DataGridTextColumn Header="Numer Telefonu" Binding="{Binding telephone}"/>
+                <DataGridTextColumn Header="Adres email" Binding="{Binding mail}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>

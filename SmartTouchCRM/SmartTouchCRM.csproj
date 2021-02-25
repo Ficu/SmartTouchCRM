@@ -84,6 +84,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\CustomersService.cs" />
     <Compile Include="Classes\ProductService.cs" />
     <Compile Include="Customers.cs">
       <DependentUpon>SmartTouchModel.tt</DependentUpon>
@@ -96,6 +97,9 @@
     </Compile>
     <Compile Include="Pages\CustomersWindow_Add.xaml.cs">
       <DependentUpon>CustomersWindow_Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CustomersWindow_Edit.xaml.cs">
+      <DependentUpon>CustomersWindow_Edit.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ProductsWindow_Add.xaml.cs">
       <DependentUpon>ProductsWindow_Add.xaml</DependentUpon>
@@ -138,6 +142,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\CustomersWindow_Add.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CustomersWindow_Edit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -193,19 +201,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\App.datasource" />
-    <None Include="Properties\DataSources\Customers.datasource" />
-    <None Include="Properties\DataSources\MainWindow.datasource" />
-    <None Include="Properties\DataSources\Orders.datasource" />
-    <None Include="Properties\DataSources\Orders_Products.datasource" />
-    <None Include="Properties\DataSources\Products.datasource" />
-    <None Include="Properties\DataSources\SmartTouchCRM.Pages.CustomersPage.datasource" />
-    <None Include="Properties\DataSources\SmartTouchCRM.Pages.OrdersPage.datasource" />
-    <None Include="Properties\DataSources\SmartTouchCRM.Pages.ProductsPage.datasource" />
-    <None Include="Properties\DataSources\SmartTouchCRM.Pages.WelcomePage.datasource" />
-    <None Include="Properties\DataSources\SmartTouchCRM.Properties.Resources.datasource" />
-    <None Include="Properties\DataSources\SmartTouchCRM.Properties.Settings.datasource" />
-    <None Include="Properties\DataSources\SmartTouchDatabseEntities.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

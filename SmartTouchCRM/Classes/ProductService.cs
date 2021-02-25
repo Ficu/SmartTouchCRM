@@ -23,40 +23,22 @@ namespace SmartTouchCRM.Classes
                 product_name = productName,
                 product_description = productDescription,
                 price = productPrice
-            };
-
-           
+            };          
 
             _db.Products.Add(product);
-
             _db.SaveChanges();
-
         }
 
         public void Update(int productId, string productName, string productDescription, decimal productPrice)
         {
+            Products updateProduct = _db.Products.Where(x => x.product_id == productId).Single();
 
-           
-            try
-            {
-                var updateProduct = _db.Products.Where(x => x.product_id == productId).Single();
-
-                updateProduct.product_name = productName;
-                updateProduct.product_description = productDescription;
-                updateProduct.price = productPrice;
-
-                _db.Products.Attach(updateProduct);
-               
-
-                _db.Entry(updateProduct).State = EntityState.Modified;
-                _db.SaveChanges();
-               
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException);
-            }
+            updateProduct.product_id = productId;
+            updateProduct.product_name = productName;
+            updateProduct.product_description = productDescription;
+            updateProduct.price = productPrice;
+            
+            _db.SaveChanges();
         }
 
         public void Remove(int productId)
@@ -66,14 +48,5 @@ namespace SmartTouchCRM.Classes
             _db.SaveChanges();
 
         }
-
-        // NOT USED 
-        /*public List<Products> GetById(int productId)
-        {
-            this.GetList();
-            var product = _db.Products.Where(x => x.product_id == productId).ToList();
-
-            return product;
-        }*/
     }
 }
