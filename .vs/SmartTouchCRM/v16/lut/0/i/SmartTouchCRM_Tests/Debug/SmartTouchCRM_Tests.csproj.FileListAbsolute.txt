@@ -11,3 +11,4 @@ C:\Users\Kuba\source\repos\SmartTouchCRM\.vs\SmartTouchCRM\v16\lut\0\b\SmartTouc
 C:\Users\Kuba\source\repos\SmartTouchCRM\.vs\SmartTouchCRM\v16\lut\0\i\SmartTouchCRM_Tests\Debug\SmartTouchCRM_Tests.csproj.CoreCompileInputs.cache
 C:\Users\Kuba\source\repos\SmartTouchCRM\.vs\SmartTouchCRM\v16\lut\0\i\SmartTouchCRM_Tests\Debug\SmartTouchCRM_Tests.csproj.CopyComplete
 C:\Users\Kuba\source\repos\SmartTouchCRM\.vs\SmartTouchCRM\v16\lut\0\i\SmartTouchCRM_Tests\Debug\SmartTouchCRM_Tests.dll
+C:\Users\Kuba\source\repos\SmartTouchCRM\.vs\SmartTouchCRM\v16\lut\0\i\SmartTouchCRM_Tests\Debug\SmartTouchCRM_Tests.csprojAssemblyReference.cache

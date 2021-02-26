@@ -3,7 +3,6 @@ C:\Users\Kuba\source\repos\SmartTouchCRM\.vs\SmartTouchCRM\v16\lut\0\b\SmartTouc
 C:\Users\Kuba\source\repos\SmartTouchCRM\.vs\SmartTouchCRM\v16\lut\0\b\SmartTouchCRM\bin\Debug\SmartTouchCRM.exe.config
 C:\Users\Kuba\source\repos\SmartTouchCRM\.vs\SmartTouchCRM\v16\lut\0\b\SmartTouchCRM\bin\Debug\SmartTouchCRM.exe
 C:\Users\Kuba\source\repos\SmartTouchCRM\.vs\SmartTouchCRM\v16\lut\0\b\SmartTouchCRM\bin\Debug\SmartTouchCRM.pdb
-C:\Users\Kuba\source\repos\SmartTouchCRM\.vs\SmartTouchCRM\v16\lut\0\i\SmartTouchCRM\Debug\SmartTouchCRM.csprojAssemblyReference.cache
 C:\Users\Kuba\source\repos\SmartTouchCRM\.vs\SmartTouchCRM\v16\lut\0\i\SmartTouchCRM\Debug\MainWindow.g.cs
 C:\Users\Kuba\source\repos\SmartTouchCRM\.vs\SmartTouchCRM\v16\lut\0\i\SmartTouchCRM\Debug\Pages\CustomersPage.g.cs
 C:\Users\Kuba\source\repos\SmartTouchCRM\.vs\SmartTouchCRM\v16\lut\0\i\SmartTouchCRM\Debug\Pages\CustomersWindow_Add.g.cs

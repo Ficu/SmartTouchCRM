@@ -13,15 +13,16 @@ namespace SmartTouchCRM.Classes
     public class CustomersService
     {
         private readonly SmartTouchDatabseEntities _db = new SmartTouchDatabseEntities();
+
         /// <summary>
         /// Returns List of Customers
         /// </summary>
         /// <returns>List of Customers in database</returns>
-
         public List<Customers> GetList()
         {
             return _db.Customers.ToList();
         }
+
         /// <summary>
         /// Create new Customer in database
         /// </summary>
@@ -43,6 +44,7 @@ namespace SmartTouchCRM.Classes
             _db.SaveChanges();
 
         }
+
         /// <summary>
         /// Update selected customer in database
         /// </summary>
@@ -63,6 +65,7 @@ namespace SmartTouchCRM.Classes
             _db.SaveChanges();
 
         }
+
         /// <summary>
         /// Remove selected Customer in database
         /// </summary>
@@ -70,10 +73,23 @@ namespace SmartTouchCRM.Classes
         public void Remove(int customerId)
         {
             var deleteCustomer = _db.Customers.Where(x => x.customer_id == customerId).Single();
+            List<Orders> orderDelete = _db.Orders.Where(x => x.customer_id == customerId).ToList();
+
+            List<Orders_Products> toDelete = new List<Orders_Products>();
+
+            foreach(var test in orderDelete)
+            {
+                List<Orders_Products> listOrders = _db.Orders_Products.Where(x => x.order_id == test.order_id).ToList();
+                _db.Orders_Products.RemoveRange(listOrders);
+            }
+
             _db.Customers.Remove(deleteCustomer);
+            _db.Orders.RemoveRange(orderDelete);
+
             _db.SaveChanges();
 
         }
+
         /// <summary>
         /// Check that string contains only digits
         /// </summary>
@@ -88,6 +104,7 @@ namespace SmartTouchCRM.Classes
             }
             return true;
         }
+
         /// <summary>
         /// Check that string contains any digit
         /// </summary>

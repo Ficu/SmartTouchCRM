@@ -12,6 +12,7 @@ namespace SmartTouchCRM.Classes
     public class OrderService
     {
         private readonly SmartTouchDatabseEntities _db = new SmartTouchDatabseEntities();
+
         /// <summary>
         /// Returns Complete list of related data from Orders and Products
         /// </summary>
@@ -26,6 +27,7 @@ namespace SmartTouchCRM.Classes
         {
             return _db.Orders.ToList();
         }
+
         /// <summary>
         /// Create new Order in database
         /// </summary>
