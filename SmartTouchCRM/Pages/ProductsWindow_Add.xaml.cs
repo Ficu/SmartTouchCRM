@@ -19,7 +19,7 @@ namespace SmartTouchCRM.Pages
     /// Logika interakcji dla klasy ProductsWindow_Add.xaml
     /// </summary>
     public partial class ProductsWindow_Add : Window
-    {
+    {        
         public ProductsWindow_Add()
         {
             InitializeComponent();

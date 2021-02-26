@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartTouchCRM", "SmartTouchCRM\SmartTouchCRM.csproj", "{197CCDE8-7AA5-440E-B07F-1A49DDC4CFFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartTouchCRM_Tests", "SmartTouchCRM_Tests\SmartTouchCRM_Tests.csproj", "{02629063-32A0-45E2-84FB-E2C2DAF259A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{197CCDE8-7AA5-440E-B07F-1A49DDC4CFFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{197CCDE8-7AA5-440E-B07F-1A49DDC4CFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{197CCDE8-7AA5-440E-B07F-1A49DDC4CFFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02629063-32A0-45E2-84FB-E2C2DAF259A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02629063-32A0-45E2-84FB-E2C2DAF259A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02629063-32A0-45E2-84FB-E2C2DAF259A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02629063-32A0-45E2-84FB-E2C2DAF259A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

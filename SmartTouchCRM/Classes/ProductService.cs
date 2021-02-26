@@ -11,12 +11,20 @@ namespace SmartTouchCRM.Classes
     public class ProductService
     {
         private readonly SmartTouchDatabseEntities _db = new SmartTouchDatabseEntities();
-
+        /// <summary>
+        /// Returns list of all products in database
+        /// </summary>
+        /// <returns>List of products</returns>
         public List<Products> GetList()
         {
             return _db.Products.ToList();
         }
-
+        /// <summary>
+        /// Create new product in database 
+        /// </summary>
+        /// <param name="productName">Product Name</param>
+        /// <param name="productDescription">Product Description</param>
+        /// <param name="productPrice">Product Price</param>
         public void Add(string productName, string productDescription, decimal productPrice) {
             Products product = new Products()
             {
@@ -28,7 +36,13 @@ namespace SmartTouchCRM.Classes
             _db.Products.Add(product);
             _db.SaveChanges();
         }
-
+        /// <summary>
+        /// Update product in database
+        /// </summary>
+        /// <param name="productId">ID of product to update</param>
+        /// <param name="productName">New product name</param>
+        /// <param name="productDescription">New product description</param>
+        /// <param name="productPrice">New price</param>
         public void Update(int productId, string productName, string productDescription, decimal productPrice)
         {
             Products updateProduct = _db.Products.Where(x => x.product_id == productId).Single();
@@ -40,7 +54,11 @@ namespace SmartTouchCRM.Classes
             
             _db.SaveChanges();
         }
-
+        /// <summary>
+        /// Removes product in database
+        /// </summary>
+        /// <param name="productId">ID of product to remove</param>
+        /// <returns>Result of delete process</returns>
         public bool Remove(int productId)
         {
             
@@ -57,10 +75,6 @@ namespace SmartTouchCRM.Classes
             }          
 
         }
-
-        public Products Search(string inputString)
-        {
-            return (Products)_db.Products.Where(x => x.product_name.StartsWith(inputString));
-        }
+        
     }
 }
