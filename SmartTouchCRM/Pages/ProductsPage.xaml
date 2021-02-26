@@ -18,7 +18,7 @@
         </StackPanel>
         <DataGrid x:Name="Product_Data" x:FieldModifier="public" AutoGenerateColumns="False" ColumnWidth="Auto" Margin="159,71,30,60" MinHeight="350" MinWidth="622" IsReadOnly="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Id" Binding="{Binding product_id}"/>
+                <DataGridTextColumn Header="ID Produktu" Binding="{Binding product_id}"/>
                 <DataGridTextColumn Header="Nazwa" Binding="{Binding product_name}"/>
                 <DataGridTextColumn Header="Opis" Binding="{Binding product_description}"/>
                 <DataGridTextColumn Header="Cena" Binding="{Binding price}"/>

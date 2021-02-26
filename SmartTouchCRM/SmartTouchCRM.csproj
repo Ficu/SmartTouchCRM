@@ -85,6 +85,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\CustomersService.cs" />
+    <Compile Include="Classes\OrderService.cs" />
     <Compile Include="Classes\ProductService.cs" />
     <Compile Include="Customers.cs">
       <DependentUpon>SmartTouchModel.tt</DependentUpon>
@@ -100,6 +101,12 @@
     </Compile>
     <Compile Include="Pages\CustomersWindow_Edit.xaml.cs">
       <DependentUpon>CustomersWindow_Edit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrdersWindow_Add.xaml.cs">
+      <DependentUpon>OrdersWindow_Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrdersWindow_Show.xaml.cs">
+      <DependentUpon>OrdersWindow_Show.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ProductsWindow_Add.xaml.cs">
       <DependentUpon>ProductsWindow_Add.xaml</DependentUpon>
@@ -150,6 +157,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\OrdersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\OrdersWindow_Add.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\OrdersWindow_Show.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

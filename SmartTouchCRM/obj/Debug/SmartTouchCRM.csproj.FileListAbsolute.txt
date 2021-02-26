@@ -2,7 +2,10 @@ C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\SmartTouchCRM.c
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\MainWindow.g.cs
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\CustomersPage.g.cs
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\CustomersWindow_Add.g.cs
+C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\CustomersWindow_Edit.g.cs
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\OrdersPage.g.cs
+C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\OrdersWindow_Add.g.cs
+C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\OrdersWindow_Show.g.cs
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\ProductsPage.g.cs
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\ProductsWindow_Add.g.cs
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\ProductsWindow_Edit.g.cs
@@ -11,7 +14,6 @@ C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\App.g.cs
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\SmartTouchCRM_Content.g.cs
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\SmartTouchCRM_MarkupCompile.cache
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\SmartTouchCRM_MarkupCompile.lref
-C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\CustomersWindow_Edit.g.cs
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\bin\Debug\SmartTouchDatabse.mdf
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\bin\Debug\SmartTouchDatabse_log.ldf
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\bin\Debug\SmartTouchCRM.exe.config
@@ -24,12 +26,14 @@ C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\bin\Debug\EntityFramework
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\MainWindow.baml
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\CustomersPage.baml
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\CustomersWindow_Add.baml
+C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\CustomersWindow_Edit.baml
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\OrdersPage.baml
+C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\OrdersWindow_Add.baml
+C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\OrdersWindow_Show.baml
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\ProductsPage.baml
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\ProductsWindow_Add.baml
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\ProductsWindow_Edit.baml
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\WelcomePage.baml
-C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\Pages\CustomersWindow_Edit.baml
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\SmartTouchCRM.g.resources
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\SmartTouchCRM.Properties.Resources.resources
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\obj\Debug\SmartTouchCRM.csproj.GenerateResource.cache

@@ -1,0 +1,55 @@
+﻿<Window x:Class="SmartTouchCRM.Pages.OrdersWindow_Show"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartTouchCRM.Pages"
+        mc:Ignorable="d"
+        Title="Zamówienie" Width="850" Height="500" Icon="icon.png" ResizeMode="NoResize">
+    <Grid Background="#FF00529B">
+        <TextBlock x:Name="OrderShowName_Label" Text="Zamówienie numer" Foreground="White" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0"/>
+        <Grid HorizontalAlignment="Left" Height="163" Margin="29,100,0,0" VerticalAlignment="Top" Width="317">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Imie:" Grid.Row="0" Grid.Column="0" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="White"/>
+            <TextBlock x:Name="customerFirstname" Text="" Grid.Row="0" Grid.Column="1" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" Margin="10,0,0,0"/>
+            <TextBlock Text="Nazwisko:" Grid.Row="1" Grid.Column="0" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="White"/>
+            <TextBlock x:Name="customerLastname" Text="" Grid.Row="1" Grid.Column="1" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" Margin="10,0,0,0"/>
+            <TextBlock Text="Numer telefonu:" Grid.Row="2" Grid.Column="0" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="White"/>
+            <TextBlock x:Name="customerTelephone" Text="" Grid.Row="2" Grid.Column="1" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" Margin="10,0,0,0"/>
+            <TextBlock Text="Adres email:" Grid.Row="3" Grid.Column="0" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="White"/>
+            <TextBlock x:Name="customerMail" Text="" Grid.Row="3" Grid.Column="1" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" Margin="10,0,0,0"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="81.5" Margin="497,100,0,0" VerticalAlignment="Top" Width="317">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Data zamówienia:" Grid.Row="0" Grid.Column="0" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="White"/>
+            <TextBlock x:Name="orderDate" Text="{Binding Orders.order_date, StringFormat=\{0:dd.MM.yy\} }" Grid.Row="0" Grid.Column="1" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" Margin="10,0,0,0"/>
+            <TextBlock Text="Wartość zamówienia:" Grid.Row="1" Grid.Column="0" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="White"/>
+            <TextBlock x:Name="orderValue" Text="{Binding order_value}" Grid.Row="1" Grid.Column="1" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" Margin="10,0,0,0"/>
+       </Grid>
+        <DataGrid x:Name="ProductOrder_Data" x:FieldModifier="public" AutoGenerateColumns="False" ColumnWidth="Auto" HorizontalAlignment="Left" Height="170" Margin="29,268,0,0" VerticalAlignment="Top" Width="785" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID Produktu" Binding="{Binding product_id}"/>
+                <DataGridTextColumn Header="Nazwa" Binding="{Binding Products.product_name}"/>
+                <DataGridTextColumn Header="Opis" Binding="{Binding Products.product_description}"/>
+                <DataGridTextColumn Header="Cena" Binding="{Binding Products.price}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

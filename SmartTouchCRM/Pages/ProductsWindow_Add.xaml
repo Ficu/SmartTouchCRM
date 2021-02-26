@@ -15,7 +15,7 @@
             <Label Content="_Cena:" Target="{Binding ElementName=productPrice}" Foreground="White" />
             <TextBox Name="productPrice" />
             <Label Content="_Opis:" Target="{Binding ElementName=productDescription}" Foreground="White" />
-            <TextBox Name="productDescription" Height="60" />
+            <TextBox Name="productDescription" Height="60" AcceptsReturn="True" TextWrapping="Wrap"  />
             <Button x:Name="AddButton" Content="Dodaj" Click="AddButton_Click" Margin="10,30,10,0" Height="42" VerticalAlignment="Center" Width="342"/>
         </StackPanel>
     </Grid>

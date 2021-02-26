@@ -41,9 +41,42 @@ namespace SmartTouchCRM.Pages
         {
             CustomersService customer = new CustomersService();
 
-            //Decimal.TryParse(productPrice.Text, out decimal productPriceDecimal);
+            string telephoneFormated = String.Concat(telephone.Text.Where(c => !Char.IsWhiteSpace(c)));
 
-            customer.Update(selectedCustomer.customer_id, firstName.Text, lastName.Text, telephone.Text, mail.Text);
+            if (string.IsNullOrWhiteSpace(firstName.Text.Trim()))
+            {
+                MessageBox.Show("Musisz podać imie", "Niepoprawne dane", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            else if (customer.ItHasDigit(firstName.Text.Trim()))
+            {
+                MessageBox.Show("W imieniu są cyfry", "Niepoprawne dane", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            else if (string.IsNullOrWhiteSpace(lastName.Text.Trim()))
+            {
+                MessageBox.Show("Musisz podać nazwisko", "Niepoprawne dane", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;                
+            }
+            else if (customer.ItHasDigit(lastName.Text.Trim()))
+            {
+                MessageBox.Show("W nazwisku są cyfry", "Niepoprawne dane", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            else if (!customer.IsDigitsOnly(telephoneFormated))
+            {
+                MessageBox.Show("Numer telefonu może zawierać tylko cyfry", "Niepoprawne dane", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            else if (telephoneFormated.Count() != 9)
+            {
+                MessageBox.Show("Numer telefonu musi mieć dokładnie 9 cyfr", "Niepoprawne dane", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            else
+            {
+                customer.Update(selectedCustomer.customer_id, firstName.Text.Trim(), lastName.Text.Trim(), telephoneFormated, mail.Text.Trim());
+            }
 
             this.Hide();
         }

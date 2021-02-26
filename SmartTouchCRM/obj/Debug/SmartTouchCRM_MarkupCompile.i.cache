@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\App.xaml
-9333392840
+111435603413
 4-1315348746
-231124104787
+261960517454
 18550496030
-MainWindow.xaml;Pages\CustomersPage.xaml;Pages\CustomersWindow_Add.xaml;Pages\CustomersWindow_Edit.xaml;Pages\OrdersPage.xaml;Pages\ProductsPage.xaml;Pages\ProductsWindow_Add.xaml;Pages\ProductsWindow_Edit.xaml;Pages\WelcomePage.xaml;
+MainWindow.xaml;Pages\CustomersPage.xaml;Pages\CustomersWindow_Add.xaml;Pages\CustomersWindow_Edit.xaml;Pages\OrdersPage.xaml;Pages\OrdersWindow_Add.xaml;Pages\OrdersWindow_Show.xaml;Pages\ProductsPage.xaml;Pages\ProductsWindow_Add.xaml;Pages\ProductsWindow_Edit.xaml;Pages\WelcomePage.xaml;
 
 True
 

@@ -28,8 +28,27 @@ namespace SmartTouchCRM.Pages
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             ProductService product = new ProductService();
-            Decimal.TryParse(productPrice.Text, out decimal productPriceDecimal);
-            product.Add(productName.Text, productDescription.Text, productPriceDecimal);
+
+           bool result = Decimal.TryParse(productPrice.Text.Trim(), out decimal productPriceDecimal);
+            if(string.IsNullOrWhiteSpace(productName.Text.Trim()))
+            {
+                MessageBox.Show("Nazwa produktu jest wymagana", "Niepoprawne dane", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            else if(!result)
+            {
+                MessageBox.Show("Cena musi być być liczbą", "Niepoprawne dane", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            } else if (productPriceDecimal < 0)
+            {                
+                MessageBox.Show("Cena musi być większa bądź równa 0", "Niepoprawne dane", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            else
+            {
+                product.Add(productName.Text.Trim(), productDescription.Text.Trim(), productPriceDecimal);
+            }
+
             this.Hide();
         }
     }

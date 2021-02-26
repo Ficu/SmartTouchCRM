@@ -61,7 +61,7 @@ namespace SmartTouchCRM.Pages
             Products selectedProduct = (Product_Data.SelectedItem as Products);
             if (selectedProduct == null)
             {
-                MessageBox.Show("Musisz najpierw wybrać produkt!");
+                MessageBox.Show("Musisz najpierw wybrać produkt!", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
             } else
             {            
 
@@ -75,9 +75,27 @@ namespace SmartTouchCRM.Pages
 
         private void DeleteProduct_Click(object sender, RoutedEventArgs e)
         {
+
             int selectedProductId = (Product_Data.SelectedItem as Products).product_id;
-            ProductService.Remove(selectedProductId);
-            Reload();
+
+            MessageBoxResult decision = MessageBox.Show("Czy na pewno chcesz usunąć zamówienie?", "Ostrzeżenie", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No);
+            if (decision == MessageBoxResult.Yes)
+            {
+
+                if (ProductService.Remove(selectedProductId))
+                {
+                    MessageBox.Show("Wybrany rekord został usunięty", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Reload();
+                }
+                else
+                {
+                    MessageBox.Show("Nie możesz usunąć rekordu, znajduje się on w zamówieniu", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            } else
+            {
+                return;
+            }
+            
         }
     }
 }

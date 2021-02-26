@@ -41,12 +41,26 @@ namespace SmartTouchCRM.Classes
             _db.SaveChanges();
         }
 
-        public void Remove(int productId)
+        public bool Remove(int productId)
         {
-            var deleteProduct = _db.Products.Where(x => x.product_id == productId).Single();
-            _db.Products.Remove(deleteProduct);
-            _db.SaveChanges();
+            
+            int liczba = _db.Orders_Products.Where(x => x.product_id == productId).Count();
+            if (liczba > 0)
+            {
+                return false;
+            } else
+            {
+                var deleteProduct = _db.Products.Where(x => x.product_id == productId).Single();
+                _db.Products.Remove(deleteProduct);
+                _db.SaveChanges();
+                return true;
+            }          
 
+        }
+
+        public Products Search(string inputString)
+        {
+            return (Products)_db.Products.Where(x => x.product_name.StartsWith(inputString));
         }
     }
 }
