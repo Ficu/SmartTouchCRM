@@ -75,27 +75,33 @@ namespace SmartTouchCRM.Pages
 
         private void DeleteProduct_Click(object sender, RoutedEventArgs e)
         {
-
-            int selectedProductId = (Product_Data.SelectedItem as Products).product_id;
-
-            MessageBoxResult decision = MessageBox.Show("Czy na pewno chcesz usunąć zamówienie?", "Ostrzeżenie", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No);
-            if (decision == MessageBoxResult.Yes)
+            if (Product_Data.SelectedItem == null)
             {
+                MessageBox.Show("Musisz najpierw wybrać produkt", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                int selectedProductId = (Product_Data.SelectedItem as Products).product_id;
 
-                if (ProductService.Remove(selectedProductId))
+                MessageBoxResult decision = MessageBox.Show("Czy na pewno chcesz usunąć zamówienie?", "Ostrzeżenie", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No);
+                if (decision == MessageBoxResult.Yes)
                 {
-                    MessageBox.Show("Wybrany rekord został usunięty", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
-                    Reload();
+
+                    if (ProductService.Remove(selectedProductId))
+                    {
+                        MessageBox.Show("Wybrany rekord został usunięty", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                        Reload();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nie możesz usunąć rekordu, znajduje się on w zamówieniu", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Nie możesz usunąć rekordu, znajduje się on w zamówieniu", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
                 }
-            } else
-            {
-                return;
             }
-            
         }
     }
 }

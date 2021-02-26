@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="SmartTouchCRM.exe" version="1.0.0.3" publicKeyToken="abbc4e73d007e5e5" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="SmartTouchCRM" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="SmartTouchCRM.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opcje manifestu kontroli konta użytkownika
+          Jeśli chcesz zmienić poziom kontroli konta użytkownika systemu Windows, zastąp węzeł 
+          requestedExecutionLevel jednym z następujących.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Jeśli chcesz użyć wirtualizacji plików i rejestru do celów zgodności wstecznej, 
+         usuń węzeł requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EntityFramework.dll" size="4991352">
+      <assemblyIdentity name="EntityFramework" version="6.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>/0K8pwRgXhh6u0VSOGixUSjWrxworUCkV51QfTSpU7I=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EntityFramework.SqlServer.dll" size="591752">
+      <assemblyIdentity name="EntityFramework.SqlServer" version="6.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>qWDdTS8PN7PAn/uVZ8MkJrh5ExDX65NcBMgZw9Rr1J4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SmartTouchCRM.exe" size="305112">
+      <assemblyIdentity name="SmartTouchCRM" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>fa0V5rGXE2rtF58l5+ZNvhOACq+VMnHksl3cdx69A8Y=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="icon.ico" size="101969">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>OpXdFKurdkgzjRRe/Sm0kpPEhhdw+jwFbHNtYK7X5DA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SmartTouchCRM.exe.config" size="1550">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>tf930bY33cx3KmsGpqjj7SxQFAdkL7SGAzMqMWW9g2Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SmartTouchDatabse.mdf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mdi+Rz9zpILpiCw/QcM6SkpAq/1Rv+ol7hocpHRtefM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SmartTouchDatabse_log.ldf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>olinQKKTKcI6IvfedOgGNBBjOwksHOqPISqU1GDAPU0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SmartTouchModel.Context.tt" size="22939">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>tEqf1sAk8o2B7UpuqiIQHss6Rwy1X6Jk9I/m5DeVH2Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SmartTouchModel.tt" size="25284">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>gae6XYoHwoRhZbAYF+lGsHqNoe4EaIwRSpvbyCYqGmo=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-J14IO50\Kuba" issuerKeyHash="5779ab109f2329da37e6059d655fe54b3d9c7119" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>DzK/y1UhASNC2glL9/VclxSbfIUqsb7LayvNqVhAGgE=</DigestValue></Reference></SignedInfo><SignatureValue>QoKJhPhgvNrmU6ko1FvDgAt5Qtat4AZ9V9EnL80ovGaDvME7t+Mn4gKldPAt6ee4LOs6aVR5OHd+V3wdRn8jHz0B04wj3irxZQwVrZ2kkxXje2anI+u+I1fu6yKd+ALZuOzY4GqcyQPV1jU8V0mRvAXmmFtdeg95egyG8AaOplw=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>x2e7ZBtHbp5Vv9Whn9PJqsfe46qtWlcsDEQZGdmWZ6pNLVZYEbJh/BHQbjsSRFA53IDWNpDMlHbFlxMxMegY4Xpk06grqkMs6SQJ56fRkHF5cRQx9lGYGiRW970k9gU6WgmvBvP4OFxsbt+QSEv/zXwSYG7fniaPnwfX/Kr0tLU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="011a4058a9cd2b6bcbbeb12a857c9b14975cf5f74b09da4223012155cbbf320f" Description="" Url=""><as:assemblyIdentity name="SmartTouchCRM.exe" version="1.0.0.3" publicKeyToken="abbc4e73d007e5e5" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-J14IO50\Kuba</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>A9myCIHWSNYPv1SPCUuShJmM9oAqPt0oz5iahsPzBO0=</DigestValue></Reference></SignedInfo><SignatureValue>NqOOewuBgDkwOTEW7FWfwaGkpmhYL3psT0Kik+B/etbDWfFvnXqybbqzb3x6cM5a9vnJmrhnQrgsnZpDb5wB1i2n1SP8JZ7tXtGE++O3J4kemZh+h3H75JUfC152gOyMaALXENepO5BF25ipWPfJJke7qadToztm4sbAA4SkTV4=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>x2e7ZBtHbp5Vv9Whn9PJqsfe46qtWlcsDEQZGdmWZ6pNLVZYEbJh/BHQbjsSRFA53IDWNpDMlHbFlxMxMegY4Xpk06grqkMs6SQJ56fRkHF5cRQx9lGYGiRW970k9gU6WgmvBvP4OFxsbt+QSEv/zXwSYG7fniaPnwfX/Kr0tLU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB6TCCAVKgAwIBAgIQQssHbRm9qYlCAWLTUh+2ajANBgkqhkiG9w0BAQsFADAzMTEwLwYDVQQDHigARABFAFMASwBUAE8AUAAtAEoAMQA0AEkATwA1ADAAXABLAHUAYgBhMB4XDTIxMDIyNjE3MTg0OFoXDTIyMDIyNjIzMTg0OFowMzExMC8GA1UEAx4oAEQARQBTAEsAVABPAFAALQBKADEANABJAE8ANQAwAFwASwB1AGIAYTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAx2e7ZBtHbp5Vv9Whn9PJqsfe46qtWlcsDEQZGdmWZ6pNLVZYEbJh/BHQbjsSRFA53IDWNpDMlHbFlxMxMegY4Xpk06grqkMs6SQJ56fRkHF5cRQx9lGYGiRW970k9gU6WgmvBvP4OFxsbt+QSEv/zXwSYG7fniaPnwfX/Kr0tLUCAwEAATANBgkqhkiG9w0BAQsFAAOBgQCOsJfWTzfAlxx+o4uULg6FKdtA5PAQvfczTBjoEkMa30I7D75ZahjJ4Kj3nJVTCjTHDlVh3uYhUAIlyGl2MjZbyTyZgGx/h2TfsI6m0UlqY5e3jd9UFnRpuHo7WiUkn4wSxOaY0HjofA6OwZSGLIhRtg+gvHeYj3fCNGF1QdrOvA==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

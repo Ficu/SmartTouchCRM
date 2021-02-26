@@ -62,7 +62,7 @@ namespace SmartTouchCRM.Pages
             Customers selectedCustomer = (Customers_Data.SelectedItem as Customers);
             if (selectedCustomer == null)
             {
-                MessageBox.Show("Musisz najpierw wybrać produkt!");
+                MessageBox.Show("Musisz najpierw wybrać klienta", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
@@ -77,9 +77,16 @@ namespace SmartTouchCRM.Pages
 
         private void DeleteProduct_Click(object sender, RoutedEventArgs e)
         {
-            int selectedCustomerId = (Customers_Data.SelectedItem as Customers).customer_id;
-            CustomerService.Remove(selectedCustomerId);
-            Reload();
+            if (Customers_Data.SelectedItem == null)
+            {
+                MessageBox.Show("Musisz najpierw wybrać klienta", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                int selectedCustomerId = (Customers_Data.SelectedItem as Customers).customer_id;
+                CustomerService.Remove(selectedCustomerId);
+                Reload();
+            }
         }
 
     }
