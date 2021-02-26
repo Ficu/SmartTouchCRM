@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace SmartTouchCRM.Pages
 {
     /// <summary>
-    /// Logika interakcji dla klasy ProductsWindow_Edit.xaml
+    /// Interaction logic for ProductsWindow_Edit.xaml
     /// </summary>
     public partial class ProductsWindow_Edit : Window
     {

@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace SmartTouchCRM.Classes
 {
+    /// <summary>
+    /// Customer management service class
+    /// </summary>
     class CustomersService
     {
         private readonly SmartTouchDatabseEntities _db = new SmartTouchDatabseEntities();

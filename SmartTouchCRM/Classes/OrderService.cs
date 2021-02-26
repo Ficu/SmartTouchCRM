@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace SmartTouchCRM.Classes
 {
-
-    class OrderService
+    /// <summary>
+    /// Order management service class
+    /// </summary>
+    public class OrderService
     {
         private readonly SmartTouchDatabseEntities _db = new SmartTouchDatabseEntities();
         /// <summary>

@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace SmartTouchCRM.Pages
 {
     /// <summary>
-    /// Logika interakcji dla klasy WelcomePage.xaml
+    /// Interaction logic for WelcomePage.xaml
     /// </summary>
     public partial class WelcomePage : Page
     {

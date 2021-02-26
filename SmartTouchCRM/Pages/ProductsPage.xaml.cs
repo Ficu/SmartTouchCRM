@@ -17,7 +17,7 @@ using System.Windows.Shapes;
 namespace SmartTouchCRM.Pages
 {
     /// <summary>
-    /// Logika interakcji dla klasy ProductsPage.xaml
+    /// Interaction logic for ProductsPage.xaml
     /// </summary>
     public partial class ProductsPage : Page
     {
@@ -52,7 +52,7 @@ namespace SmartTouchCRM.Pages
 
         private void Reload()
         {
-            SmartTouchDatabseEntities _reload = new SmartTouchDatabseEntities(); // mało efektywne ale musi tak być, przez problemy z odświeżaniem
+            SmartTouchDatabseEntities _reload = new SmartTouchDatabseEntities();
             Product_Data.ItemsSource = _reload.Products.ToList();
         }
 

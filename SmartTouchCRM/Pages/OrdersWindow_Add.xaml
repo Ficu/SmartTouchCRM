@@ -21,14 +21,8 @@
                     <DataGridTextColumn Header="Cena" Binding="{Binding price}"/>
                 </DataGrid.Columns>
             </DataGrid>
-
-            <Button x:Name="AddButton" Content="Dodaj" Click="AddButton_Click" Margin="11,30,11,0" Height="42" VerticalAlignment="Center" Width="342"/>
-
-
-
-
-
-            
+            <Label Content="Aby dodać kilka produktów przytrzymaj ctrl podczas zaznaczania" Foreground="White" />
+            <Button x:Name="AddButton" Content="Dodaj" Click="AddButton_Click" Margin="11,10,11,0" Height="42" VerticalAlignment="Center" Width="342"/>
         </StackPanel>        
     </Grid>
 </Window>
