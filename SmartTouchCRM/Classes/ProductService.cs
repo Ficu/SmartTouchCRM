@@ -13,6 +13,7 @@ namespace SmartTouchCRM.Classes
     public class ProductService
     {
         private readonly SmartTouchDatabseEntities _db = new SmartTouchDatabseEntities();
+
         /// <summary>
         /// Returns list of all products in database
         /// </summary>
@@ -21,6 +22,7 @@ namespace SmartTouchCRM.Classes
         {
             return _db.Products.ToList();
         }
+
         /// <summary>
         /// Create new product in database 
         /// </summary>
@@ -38,6 +40,7 @@ namespace SmartTouchCRM.Classes
             _db.Products.Add(product);
             _db.SaveChanges();
         }
+
         /// <summary>
         /// Update product in database
         /// </summary>
@@ -56,6 +59,7 @@ namespace SmartTouchCRM.Classes
             
             _db.SaveChanges();
         }
+
         /// <summary>
         /// Removes product in database
         /// </summary>
@@ -65,6 +69,7 @@ namespace SmartTouchCRM.Classes
         {
             
             int liczba = _db.Orders_Products.Where(x => x.product_id == productId).Count();
+
             if (liczba > 0)
             {
                 return false;

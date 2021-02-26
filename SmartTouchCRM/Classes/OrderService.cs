@@ -21,6 +21,11 @@ namespace SmartTouchCRM.Classes
         {
             return _db.Orders_Products.Include("Orders").Include("Products").Where(x => x.order_id == orderid).ToList();
         }
+
+        public List<Orders> GetOrders()
+        {
+            return _db.Orders.ToList();
+        }
         /// <summary>
         /// Create new Order in database
         /// </summary>

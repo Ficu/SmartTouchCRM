@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SmartTouchDatabseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="customer_id" />
+    </Key>
+    <Property Name="customer_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lastname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telephone" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="mail" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Orders" Relationship="Self.ref_order_customer" FromRole="Customers" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="order_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="customer_id" Type="Int32" Nullable="false" />
+    <Property Name="order_date" Type="DateTime" Precision="0" />
+    <Property Name="order_value" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="Customers" Relationship="Self.ref_order_customer" FromRole="Orders" ToRole="Customers" />
+    <NavigationProperty Name="Orders_Products" Relationship="Self.ref_orderid" FromRole="Orders" ToRole="Orders_Products" />
+  </EntityType>
+  <EntityType Name="Orders_Products">
+    <Key>
+      <PropertyRef Name="id_order_product" />
+    </Key>
+    <Property Name="id_order_product" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="order_id" Type="Int32" Nullable="false" />
+    <Property Name="product_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Orders" Relationship="Self.ref_orderid" FromRole="Orders_Products" ToRole="Orders" />
+    <NavigationProperty Name="Products" Relationship="Self.ref_proid" FromRole="Orders_Products" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="product_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="product_description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <NavigationProperty Name="Orders_Products" Relationship="Self.ref_proid" FromRole="Products" ToRole="Orders_Products" />
+  </EntityType>
+  <Association Name="ref_order_customer">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="customer_id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="customer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ref_orderid">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+    <End Role="Orders_Products" Type="Self.Orders_Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="order_id" />
+      </Principal>
+      <Dependent Role="Orders_Products">
+        <PropertyRef Name="order_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ref_proid">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="Orders_Products" Type="Self.Orders_Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="Orders_Products">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SmartTouchDatabseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Customers" EntityType="Self.Customers" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" />
+    <EntitySet Name="Orders_Products" EntityType="Self.Orders_Products" />
+    <EntitySet Name="Products" EntityType="Self.Products" />
+    <AssociationSet Name="ref_order_customer" Association="Self.ref_order_customer">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="ref_orderid" Association="Self.ref_orderid">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="Orders_Products" EntitySet="Orders_Products" />
+    </AssociationSet>
+    <AssociationSet Name="ref_proid" Association="Self.ref_proid">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Orders_Products" EntitySet="Orders_Products" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -10,13 +10,14 @@ namespace SmartTouchCRM.Classes
     /// <summary>
     /// Customer management service class
     /// </summary>
-    class CustomersService
+    public class CustomersService
     {
         private readonly SmartTouchDatabseEntities _db = new SmartTouchDatabseEntities();
         /// <summary>
         /// Returns List of Customers
         /// </summary>
         /// <returns>List of Customers in database</returns>
+
         public List<Customers> GetList()
         {
             return _db.Customers.ToList();

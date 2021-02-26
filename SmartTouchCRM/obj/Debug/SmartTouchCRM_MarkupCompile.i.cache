@@ -16,5 +16,5 @@ C:\Users\Kuba\source\repos\SmartTouchCRM\SmartTouchCRM\App.xaml
 18550496030
 MainWindow.xaml;Pages\CustomersPage.xaml;Pages\CustomersWindow_Add.xaml;Pages\CustomersWindow_Edit.xaml;Pages\OrdersPage.xaml;Pages\OrdersWindow_Add.xaml;Pages\OrdersWindow_Show.xaml;Pages\ProductsPage.xaml;Pages\ProductsWindow_Add.xaml;Pages\ProductsWindow_Edit.xaml;Pages\WelcomePage.xaml;
 
-True
+False
 
